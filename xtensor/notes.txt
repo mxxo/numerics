@@ -1,0 +1,3 @@
+small xtensor examples (no simd working yet) c.f. https://github.com/QuantStack/xtensor
+
+compile with clang++ file.cpp -std=c++14
