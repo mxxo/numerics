@@ -4,6 +4,9 @@
 # like rust, functions in julia can either use an explicit return statement or
 # in the absence of one, will evaluate to the last expression in the function
 
+# include if plotting
+# using Gadfly
+
 # -- functions
 """find_coeffs: given arrays x, y of length n for a 2D function y = f(x),
                 return coefficients for a fitted polynomial of order n"""
@@ -56,3 +59,14 @@ println(typeof(f16_coeffs), "\n")
 # ex 5 -> interpolation
 println("The interpolated value at x = 4 for a model of the unit parabola:")
 println(coeff_interpolate(parabola_coeffs, 4), "\n")
+
+# # ex 6 -> plotting
+# println("Plotting the quadratic fit from zero to ten as output.svg")
+# x = 1:10
+# y = [coeff_interpolate(parabola_coeffs, xi) for xi in x]
+#
+# # write output file
+# # -- took ~4GiB memory and roughly 30 seconds to plot (output was only 9.6 kB)
+#
+# # @time draw(SVG("output.svg", 6inch, 3inch), plot(x=x, y=y, Geom.point, Geom.line))
+
