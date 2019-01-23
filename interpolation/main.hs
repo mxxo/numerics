@@ -1,6 +1,6 @@
 import Data.Scientific as Scientific -- arbitrary precision floats
 import Derivative -- hand-rolled derivative approximation
-import Interpolation -- continous function interpolation methods
+import Interpolation -- continuous function interpolation methods
 
 main :: IO ()
 main = do
