@@ -2,4 +2,5 @@
 *.svg
 *.o
 *.hi
-[^\.]*
+*.png
+matrix-inversion/
